@@ -1,0 +1,22 @@
+<div class="container">
+    <table id="student">
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Percentage</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Fees</th>
+            <th>Per</th>
+        </tr>
+        <tr *ngFor="let std of students">
+            <td>{{std .name|titlecase}}</td>
+            <td>{{std.course}}</td>
+            <td>{{std.marks}}</td>
+            <td>{{(std.marks/total)|percent}}</td>
+            <td>{{std.DOB|date}}</td>
+            <td>{{std.gender|uppercase}}</td>
+            <td>{{std.fees|currency:'INR'}}</td>
+            <td>{{std.per|percent}}</td> 
+        </tr></table></div>
